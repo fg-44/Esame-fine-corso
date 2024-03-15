@@ -1,0 +1,75 @@
+﻿@model TheAncientInn.Models.Tbl_Orders
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<p class="display-4">Add to your Cart</p>
+
+<div>
+
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tbl_Products.Nome_Product)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tbl_Products.Nome_Product)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tbl_Ingredients.Name_Ingredients)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tbl_Ingredients.Name_Ingredients)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tbl_Users.Name_User)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tbl_Users.Name_User)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Adress_Client)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adress_Client)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Note_Client)
+        </dt>
+
+    </dl>
+</div>
+
+
+<div class="mt-5 text-dark">
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        @Html.TextBox("Id_Order", Model.Id_Order, new { @class = "d-none", @type = "number" })
+
+        @Html.Label("Adress_Client", "Add Adress_Client")
+        @Html.TextBox("Adress_Client", "", new { @name = "Indirizzo", @class = "form-control my-2", @placeholder = "Inserisci indirizzo", @required = "true" })
+
+        @Html.Label("Note_Client", "Note Client")
+        @Html.TextBox("Note Client", "", new { @name = "Note", @class = "form-control  my-2", @placeholder = "Aggiungi delle note", @required = "true" })
+
+        @Html.Label("Quantity_Product", "Quantity?")
+        @Html.DropDownList("Quantity", Enumerable.Range(1, 10).Select(i => new SelectListItem { Text = i.ToString(), Value = i.ToString() }), new { @name = "Quantita", @class = "form-control  my-2" })
+
+        <input type="submit" value="Add to cart" class="btn btn-outline-dark" />
+    }
+
+</div>
+

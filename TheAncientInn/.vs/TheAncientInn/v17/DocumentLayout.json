@@ -1,0 +1,62 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Federica\\source\\repos\\TheAncientInn\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{888F57F8-CC73-44EF-AB81-E45A07516F4A}|TheAncientInn\\TheAncientInn.csproj|c:\\users\\federica\\source\\repos\\theancientinn\\theancientinn\\views\\tbl_products\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{888F57F8-CC73-44EF-AB81-E45A07516F4A}|TheAncientInn\\TheAncientInn.csproj|solutionrelative:theancientinn\\views\\tbl_products\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{888F57F8-CC73-44EF-AB81-E45A07516F4A}|TheAncientInn\\TheAncientInn.csproj|c:\\users\\federica\\source\\repos\\theancientinn\\theancientinn\\views\\tbl_orders\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{888F57F8-CC73-44EF-AB81-E45A07516F4A}|TheAncientInn\\TheAncientInn.csproj|solutionrelative:theancientinn\\views\\tbl_orders\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Federica\\source\\repos\\TheAncientInn\\TheAncientInn\\Views\\Tbl_Products\\Details.cshtml",
+              "RelativeDocumentMoniker": "TheAncientInn\\Views\\Tbl_Products\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Federica\\source\\repos\\TheAncientInn\\TheAncientInn\\Views\\Tbl_Products\\Details.cshtml",
+              "RelativeToolTip": "TheAncientInn\\Views\\Tbl_Products\\Details.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-15T15:56:42.721Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Federica\\source\\repos\\TheAncientInn\\TheAncientInn\\Views\\Tbl_Orders\\Details.cshtml",
+              "RelativeDocumentMoniker": "TheAncientInn\\Views\\Tbl_Orders\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Federica\\source\\repos\\TheAncientInn\\TheAncientInn\\Views\\Tbl_Orders\\Details.cshtml",
+              "RelativeToolTip": "TheAncientInn\\Views\\Tbl_Orders\\Details.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-15T15:45:58.918Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

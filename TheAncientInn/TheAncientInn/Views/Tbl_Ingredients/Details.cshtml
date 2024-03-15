@@ -1,0 +1,34 @@
+﻿@model TheAncientInn.Models.Tbl_Ingredients
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Tbl_Ingredients</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Tbl_Ingredients1.Name_Ingredients)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tbl_Ingredients1.Name_Ingredients)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name_Ingredients)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name_Ingredients)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id_Ingredients }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

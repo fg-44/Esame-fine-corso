@@ -1,0 +1,69 @@
+﻿@model TheAncientInn.Models.Tbl_Products
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div>
+    <h2> Aggiungi una @Model.Nome_Product at your cart!</h2>
+    <hr />
+</div>
+
+<div>
+
+    <div>
+        <dl class="dl-horizontal">
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Nome_Product)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Nome_Product)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Description_Product)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Description_Product)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Price_Product)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Price_Product)
+            </dd>
+
+        </dl>
+    </div>
+</div>
+
+<div class="mt-5">
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        @Html.TextBox("Id_Product", Model.Id_Product, new { @class = "d-none", @type = "number" })
+
+        @Html.Label("Address_Client", "Add Address Client")
+        @Html.TextBox("Address", "", new { @name = "Indirizzo", @class = "form-control my-2", @placeholder = "Inserisci indirizzo", @required = "true" })
+
+        @Html.Label("Note_Client ", "Add Note")
+        @Html.TextBox("Note", "", new { @name = "Note_Client ", @class = "form-control  my-2", @placeholder = "Aggiungi delle note", @required = "true" })
+
+        @Html.Label("Quantity_Product", "How many products?")
+        @Html.DropDownList("Quantity_Product", Enumerable.Range(1, 20).Select(i => new SelectListItem { Text = i.ToString(), Value = i.ToString() }), new { @name = "Quantity_Product", @class = "form-control  my-2" })
+
+        <input type="submit" value="Aggiungi al carrello" class="btn btn-outline-dark" />
+    }
+
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id_Product }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

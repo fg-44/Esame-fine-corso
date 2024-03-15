@@ -1,0 +1,91 @@
+﻿@model IEnumerable<TheAncientInn.Models.Tbl_Orders>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@if (User.IsInRole("Admin"))
+{
+    <div class="row">
+        <div class="col">
+            <label for="databox" class="text-white"> Data Filter </label> <br />
+            <input id="databox" dirname="databox" type="date" name="data" class="form-label" />
+        </div>
+        <div class="col-12 col-md-1">
+            <input id="cerca" type="button" class="btn btn-outline-dark" value="Filtra" />
+        </div>
+    </div>
+}
+
+<h2 class="display-4">Total Order</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<table class="table">
+
+    <tr>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Adress_Client)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Tbl_Products.Quantity_Product)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Note_Client)
+        </th>
+
+        <th> @**@</th>
+
+        <th> @**@</th>
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tbl_Users.Name_User)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tbl_Users.Surname_User)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adress_Client)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Note_Client)
+            </td>
+
+            <!-- IS CONFIRMED? -->
+            <td>
+                @if (item.IsConfirmed)
+                {
+                    <p> Delivered Time: @item.Delivering_Time</p>
+                }
+
+            </td>
+
+            <td>
+                @if (!item.IsConfirmed)
+                {
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id_Order }) <span>|</span>
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id_Order })
+
+                }
+                @if (User.IsInRole("Admin") && item.IsConfirmed && item.IsFulfilled)
+                {
+                    @Html.ActionLink("Fulfilled", "FulfilledOrder", new { id = item.Id_Order })
+                }
+
+
+
+            </td>
+        </tr>
+    }
+
+</table>

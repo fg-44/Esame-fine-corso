@@ -1,0 +1,70 @@
+﻿@model IEnumerable<TheAncientInn.Models.Tbl_Users>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 class="display-4"> Index </h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<hr />
+
+<p class="mt-2"> List User Site </p>
+<hr />
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name_User)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Surname_User)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Username_User)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email_User)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password_User)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Role_User)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name_User)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Surname_User)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Username_User)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email_User)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Password_User)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Role_User)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id_User }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id_User }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id_User })
+            </td>
+        </tr>
+    }
+
+</table>
